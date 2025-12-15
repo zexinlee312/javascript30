@@ -1,0 +1,25 @@
+:root {
+  --spacing: 50px;
+  --blur: 10px;
+  --base: #9c7f13;
+}
+
+body {
+  text-align: center;
+  background-color: #193549;
+  color: #cecbcb;
+  font-family: monospace;
+  font-size: 50px;
+}
+
+input {
+  width: 100px;
+}
+
+img {
+  height: 600px;
+  width:600px;
+  padding: var(--spacing);
+  filter: blur(var(--blur));
+  background-color: var(--base);
+}
