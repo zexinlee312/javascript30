@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Canvas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+      /* 隐藏滚动条 */
+    }
+
+    #draw {
+      box-sizing: border-box;
+      border: 10px solid wheat;
+    }
+
+    .toolbar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .tool-button {
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .clear-button {
+      background-color: #ff6b6b;
+    }
+
+    .clear-button:hover {
+      background-color: #ff5252;
+    }
+
+    .eraser-button {
+      background-color: #4ecdc4;
+    }
+
+    .eraser-button:hover {
+      background-color: #26a69a;
+    }
+
+    .tool-button:active {
+      transform: translateY(1px);
+    }
+
+    .tool-button.active {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="draw"></canvas>
+  <div class="toolbar">
+    <button id="clearBtn" class="tool-button clear-button">清除</button>
+    <button id="eraserBtn" class="tool-button eraser-button">橡皮擦</button>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
