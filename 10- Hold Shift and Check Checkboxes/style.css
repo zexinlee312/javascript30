@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ecd863;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-container {
+  height: 40px;
+  padding: 10px;
+  border-bottom: 1px solid #f1f1f1;
+  line-height: 40px;
+}
+
+.checkbox-container:last-child {
+  border-bottom: none;
+}
+
+label {
+  margin-left: 10px
+}
+
+input:checked+label {
+  background: #F9F9F9;
+  text-decoration: line-through;
+}
