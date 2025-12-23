@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Detection</title>
+</head>
+
+<body>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+  <script>
+    const keyRecord = [];
+    const secret = 'wesbos';
+    window.addEventListener('keyup', (e) => {
+      console.log(e.key);
+      if (keyRecord.length >= secret.length) {
+        keyRecord.shift();
+      }
+      keyRecord.push(e.key);
+      if (keyRecord.join('').includes(secret)) {
+        console.log('bingo');
+      }
+      console.log(keyRecord)
+    })
+  </script>
+</body>
+
+</html>
