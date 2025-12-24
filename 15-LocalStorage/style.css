@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container {
+  margin: 400px auto;
+  padding: 20px;
+  width: 350px;
+  border: 10px solid #5e5c5c25
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.item-operation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  height: 44px;
+  padding: 10px;
+  outline: none;
+  width: 184px;
+  border: 1px solid #5e5c5c25;
+}
+
+button {
+  height: 44px;
+  padding: 10px;
+  outline: none;
+  width: 80px;
+  border: 1px solid #5e5c5c25;
+}
