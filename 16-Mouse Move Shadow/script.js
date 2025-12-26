@@ -2,7 +2,11 @@ const container = document.querySelector('.container');
 const h1 = document.querySelector('h1');
 
 function shadowMove(event) {
-  const { offsetX, offsetY } = event;
+    // 获取鼠标相对于容器的坐标
+  const rect = container.getBoundingClientRect();
+  const offsetX = event.clientX - rect.left;
+  const offsetY = event.clientY - rect.top;
+  // const { offsetX, offsetY } = event;
   const { width, height } = container.getBoundingClientRect();
   console.log(offsetX, offsetY, width, height);
   const x = offsetX / width - 0.5;
